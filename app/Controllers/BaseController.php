@@ -1,5 +1,8 @@
 <?php
+
 namespace App\Controllers;
+
+use App\Libraries\Auth;
 
 /**
  * Class BaseController
@@ -41,6 +44,6 @@ class BaseController extends Controller
 		//--------------------------------------------------------------------
 		// E.g.:
 		// $this->session = \Config\Services::session();
+		session();
 	}
-
 }
