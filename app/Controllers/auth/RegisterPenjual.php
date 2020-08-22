@@ -64,19 +64,30 @@ class RegisterPenjual extends BaseController
             $validation = \Config\Services::validation();
             return redirect()->to('/Penjual/Register')->withInput()->with('validation', $validation);
         }
-
-        $this->UserModel->save([
-            'Username' => $this->request->getPost('username'),
-            'Email' => $this->request->getPost('email'),
-            'password' => $this->request->getPost('password'),
-            'Nama_depan' => $this->request->getPost('nama_depan'),
-            'Nama_belakang' => $this->request->getPost('nama_belakang'),
-            'Deskripsi_diri' => $this->request->getPost('deskripsi_diri'),
-            'Role' => "Penjual",
+        $username = $this->request->getPost('username');
+        $email = $this->request->getPost('email');
+        $password = $this->request->getPost('password');
+        $nama_depan = $this->request->getPost('nama_depan');
+        $nama_belakang = $this->request->getPost('nama_belakang');
+        $deskripsi_diri = $this->request->getPost('deskripsi_diri');
+        $role = "Penjual";
+        $create = $this->UserModel->save([
+            'Username' => $username,
+            'Email' => $email,
+            'password' => $password,
+            'Nama_depan' => $nama_depan,
+            'Nama_belakang' => $nama_belakang,
+            'Deskripsi_diri' => $deskripsi_diri,
+            'Role' => $role,
         ]);
-
-        session()->setFlashdata('register', 'Silahkan Login');
-
-        return redirect()->to('/Login');
+        if ($create == true) {
+            session()->set('Username', $username);
+            session()->set('Nama_depan', $nama_depan);
+            session()->set('Nama_Belakang', $nama_belakang);
+            session()->set('Role', $role);
+            return redirect()->to('/');
+        } else {
+            return redirect()->to('/Penjual/Register');
+        }
     }
 }
