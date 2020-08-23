@@ -42,10 +42,8 @@ $routes->group('', ['filter' => 'belumLogin'], function ($routes) {
 });
 
 $routes->group('', ['filter' => 'sudahLogin'], function ($routes) {
-	$routes->get('/Penjual/Register', 'auth/RegisterPenjual::index');
-	$routes->post('/Penjual/Register', 'auth/RegisterPenjual::register');
-	$routes->get('/Pembeli/Register', 'auth/RegisterPembeli::index');
-	$routes->post('/Pembeli/Register', 'auth/RegisterPembeli::register');
+	$routes->get('/Register', 'auth/Register::index');
+	$routes->post('/Register', 'auth/Register::register');
 	$routes->get('/Login', 'auth/Login::index');
 	$routes->post('/Login', 'auth/Login::Login');
 });

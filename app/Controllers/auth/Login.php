@@ -25,34 +25,32 @@ class Login extends BaseController
 
     public function Login()
     {
-        if (!$this->validate([
-            'username' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => '{field} harus diisi',
+        // if (!$this->validate([
+        //     'username' => [
+        //         'rules' => 'required',
+        //         'errors' => [
+        //             'required' => '{field} harus diisi',
 
-                ]
-            ],
-            'password' => [
-                'rules' => 'required|min_length[8]',
-                'errors' => [
-                    'required' => '{field} harus diisi',
-                    'min_length' => 'minimal 8 karakter',
-                ]
-            ]
-        ])) {
-            $validation = \Config\Services::validation();
-            return redirect()->to('/Login')->withInput()->with('validation', $validation);
-        }
+        //         ]
+        //     ],
+        //     'password' => [
+        //         'rules' => 'required|min_length[8]',
+        //         'errors' => [
+        //             'required' => '{field} harus diisi',
+        //             'min_length' => 'minimal 8 karakter',
+        //         ]
+        //     ]
+        // ])) {
+        //     $validation = \Config\Services::validation();
+        //     return redirect()->to('/Login')->withInput()->with('validation', $validation);
+        // }
         $username = $this->request->getPost('username');
         $password = $this->request->getPost('password');
         $cek = $this->UserModel->cekLogin($username, $password);
         if ($cek != null) {
             session()->set('id', $cek['id']);
-            session()->set('Username', $cek['Username']);
-            session()->set('Nama_depan', $cek['Nama_depan']);
-            session()->set('Nama_Belakang', $cek['Nama_belakang']);
-            session()->set('Role', $cek['Role']);
+            session()->set('username', $cek['Username']);
+            session()->set('role', $cek['Role']);
             return redirect()->to('/');
         } else {
             session()->setFlashdata('error', 'Username dan Password Salah');
@@ -62,8 +60,9 @@ class Login extends BaseController
 
     public function logout()
     {
-        session()->destroy();
-        session()->setFlashdata('sukses', 'Logout Berhasil');
-        return redirect()->to('/Login');
+        $destroy = session()->destroy();
+        dd($destroy);
+        // session()->setFlashdata('logout', 'Username dan Password Salah');
+        // return redirect()->to('/Login');
     }
 }
