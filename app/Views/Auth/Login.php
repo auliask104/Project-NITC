@@ -7,10 +7,10 @@
             <div class="signin-content">
                 <div class="signin-image">
                     <figure><img src="<?= base_url('assets/images/signin-image.jpg') ?>" alt="sing up image"></figure>
-                    <a href="<?= base_url('/Register') ?>" class="signup-image-link">Create an account</a>
+                    <a href="<?= base_url('/Register') ?>" class="signup-image-link">Membuat Akun Baru</a>
                 </div>
                 <div class="signin-form">
-                    <h2 class="form-title">Sign In</h2>
+                    <h2 class="form-title">Login</h2>
                     <?php if (session()->getFLashdata('login')) : ?>
                         <div class="alert alert-warning" role="alert">
                             <?= session()->getFLashdata('login'); ?>

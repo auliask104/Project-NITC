@@ -20,7 +20,7 @@ class Register extends BaseController
             'validation' => \Config\Services::validation(),
         ];
 
-        return view('Pembeli/Register', $data);
+        return view('Auth/Register', $data);
     }
 
     public function register()
@@ -75,12 +75,12 @@ class Register extends BaseController
         $nama_belakang = $this->request->getPost('nama_belakang');
         $role = "Pembeli";
         $create = $this->UserModel->save([
-            'Username' => $username,
-            'Email' => $email,
+            'username' => $username,
+            'email' => $email,
             'password' => $password,
-            'Nama_depan' => $nama_depan,
-            'Nama_belakang' => $nama_belakang,
-            'Role' => $role,
+            'nama_depan' => $nama_depan,
+            'nama_belakang' => $nama_belakang,
+            'role' => $role,
         ]);
         $cek = $this->UserModel->cekLogin($username, $password);
         if ($create == true) {

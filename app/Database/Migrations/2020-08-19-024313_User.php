@@ -18,11 +18,11 @@ class User extends Migration
 				'unsigned'       => true,
 				'auto_increment' => true,
 			],
-			'Username'       => [
+			'username'       => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '100',
 			],
-			'Email'       => [
+			'email'       => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '100',
 			],
@@ -30,20 +30,25 @@ class User extends Migration
 				'type'			 => 'VARCHAR',
 				'constraint' 	 => '100',
 			],
-			'Nama_depan' => [
+			'nama_depan' => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '100',
 			],
-			'Nama_belakang' => [
+			'nama_belakang' => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '100',
 			],
-			'Deskripsi_diri'		=> [
+			'deskripsi_diri'		=> [
 				'type'			 => 'Text',
 				'default'		 => null,
 			],
-			'Role'				 => [
+			'role'				 => [
 				'type'			 => 'Enum("Penjual" , "Pembeli")'
+			],
+			'no_rekenening'		 => [
+				'type' 			 => 'INT',
+				'constraint' 	 => '20',
+				'default'		 => null,
 			]
 		]);
 		$this->forge->addPrimaryKey('id');
