@@ -1,5 +1,8 @@
 <?php
+
 namespace App\Controllers;
+
+use App\Libraries\Auth;
 
 /**
  * Class BaseController
@@ -44,5 +47,4 @@ class BaseController extends Controller
 		$this->produkModel = new \App\Models\ProdukModel();
 		session();
 	}
-
 }

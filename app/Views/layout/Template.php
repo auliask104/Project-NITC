@@ -1,53 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <title><?= $title; ?></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><?= $title ?></title>
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="<?= base_url('assets/fonts/material-icon/css/material-design-iconic-font.min.css'); ?>">
 
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
-
-    <link rel="stylesheet" href="<?= base_url("assets/css/open-iconic-bootstrap.min.css") ?>">
-    <link rel="stylesheet" href="<?= base_url("assets/css/animate.css") ?>">
-
-    <link rel="stylesheet" href="<?= base_url("assets/css/owl.carousel.min.css") ?>">
-    <link rel="stylesheet" href="<?= base_url("assets/css/owl.theme.default.min.css") ?>">
-    <link rel="stylesheet" href="<?= base_url("assets/css/magnific-popup.css") ?>">
-
-    <link rel="stylesheet" href="<?= base_url("assets/css/aos.css") ?>">
-
-    <link rel="stylesheet" href="<?= base_url("assets/css/ionicons.min.css") ?>">
-
-    <link rel="stylesheet" href="<?= base_url("assets/css/bootstrap-datepicker.css") ?>">
-    <link rel="stylesheet" href="<?= base_url("assets/css/jquery.timepicker.css") ?>">
-
-
-    <link rel="stylesheet" href="<?= base_url("assets/css/flaticon.css") ?>">
-    <link rel="stylesheet" href="<?= base_url("assets/css/icomoon.css") ?>">
-    <link rel="stylesheet" href="<?= base_url("assets/css/style.css") ?>">
+    <!-- Main css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?= base_url('assets/css/style.css'); ?>">
 </head>
 
 <body>
 
     <?= $this->renderSection('content'); ?>
 
-    <script src="<?= base_url("assets/js/jquery.min.js") ?>"></script>
-    <script src="<?= base_url("assets/js/jquery-migrate-3.0.1.min.js") ?>"></script>
-    <script src="<?= base_url("assets/js/popper.min.js") ?>"></script>
-    <script src="<?= base_url("assets/js/bootstrap.min.js") ?>"></script>
-    <script src="<?= base_url("assets/js/jquery.easing.1.3.js") ?>"></script>
-    <script src="<?= base_url("assets/js/jquery.waypoints.min.js") ?>"></script>
-    <script src="<?= base_url("assets/js/jquery.stellar.min.js") ?>"></script>
-    <script src="<?= base_url("assets/js/owl.carousel.min.js") ?>"></script>
-    <script src="<?= base_url("assets/js/jquery.magnific-popup.min.js") ?>"></script>
-    <script src="<?= base_url("assets/js/aos.js") ?>"></script>
-    <script src="<?= base_url("assets/js/jquery.animateNumber.min.js") ?>"></script>
-    <script src="<?= base_url("assets/js/scrollax.min.js") ?>"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="<?= base_url("assets/js/google-map.js") ?>"></script>
-    <script src="<?= base_url("assets/js/main.js") ?>"></script>
-
+    <!-- JS -->
+    <script src="<?= base_url('assets/vendor/jquery/jquery.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/main.js') ?>"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>

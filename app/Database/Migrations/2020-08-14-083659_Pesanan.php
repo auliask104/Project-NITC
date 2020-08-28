@@ -15,28 +15,32 @@ class Pesanan extends Migration
 				'unsigned'       => true,
 				'auto_increment' => true,
 			],
-			'Judul'       => [
+			'judul'       => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '100',
 			],
-			'Username_pembeli'			=> [
+			'username_pembeli'			=> [
 				'type'			 => 'VARCHAR',
 				'constraint'	 => '100',
 			],
-			'Username_penjualan'		=> [
+			'username_penjualan'		=> [
 				'type'			=> 'VARCHAR',
 				'constraint'    => '100',
 			],
-			'Tanggal'			=> [
+			'tanggal'			=> [
 				'type'			=> 'DATE',
 			],
-			'Status'			=> [
+			'status'			=> [
 				'type'			=> 'VARCHAR',
 				'constraint'	=> '25',
 			],
-			'Harga'				=> [
+			'harga'				=> [
 				'type'			=> 'INT',
 				'constraint'	=> 11
+			],
+			'gambar_asli'		=> [
+				'type'			=> 'VARCHAR',
+				'constraint'	=> '255',
 			],
 		]);
 		$this->forge->addPrimaryKey('id');
