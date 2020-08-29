@@ -10,7 +10,7 @@ class SudahLoginFilter implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        if (session('Username')) // saya hanya membuat sederhana saja. silahkan kembangkan di kemudian hari
+        if (session('username')) // saya hanya membuat sederhana saja. silahkan kembangkan di kemudian hari
         {
             return redirect()->to('/Home');
         }

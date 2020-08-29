@@ -44,13 +44,13 @@ class Produk extends Migration
 			],
 		]);
 		$this->forge->addPrimaryKey('id');
-		$this->forge->createTable('Produk');
+		$this->forge->createTable('produk');
 	}
 
 	//--------------------------------------------------------------------
 
 	public function down()
 	{
-		$this->forge->dropTable('Produk');
+		$this->forge->dropTable('produk');
 	}
 }

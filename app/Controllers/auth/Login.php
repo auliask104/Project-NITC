@@ -20,7 +20,7 @@ class Login extends BaseController
             'validation' => \Config\Services::validation(),
         ];
 
-        return view('auth/Login', $data);
+        return view('login/index', $data);
     }
 
     public function Login()
@@ -60,8 +60,7 @@ class Login extends BaseController
 
     public function logout()
     {
-        $destroy = session()->destroy();
-        session()->setFlashdata('sukses', 'Username dan Password Salah');
+        session()->destroy();
         return redirect()->to('/Login');
     }
 }

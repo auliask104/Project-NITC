@@ -12,7 +12,7 @@ class Filters extends BaseConfig
 		'csrf'     => \CodeIgniter\Filters\CSRF::class,
 		'toolbar'  => \CodeIgniter\Filters\DebugToolbar::class,
 		'honeypot' => \CodeIgniter\Filters\Honeypot::class,
-		'belumLogin' => \App\Filters\LoginFilter::class,
+		'belumLogin' => \App\Filters\BelumLoginFilter::class,
 		'sudahLogin' => \App\Filters\SudahLoginFilter::class,
 	];
 

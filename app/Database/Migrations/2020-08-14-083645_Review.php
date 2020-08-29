@@ -32,13 +32,13 @@ class Review extends Migration
 			],
 		]);
 		$this->forge->addPrimaryKey('id');
-		$this->forge->createTable('Review');
+		$this->forge->createTable('review');
 	}
 
 	//--------------------------------------------------------------------
 
 	public function down()
 	{
-		$this->forge->dropTable('Review');
+		$this->forge->dropTable('review');
 	}
 }

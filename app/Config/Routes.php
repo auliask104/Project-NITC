@@ -36,14 +36,15 @@ $routes->get('/', 'Home::index');
 
 
 
-
 $routes->group('', ['filter' => 'belumLogin'], function ($routes) {
 	$routes->get('/Logout', 'auth/Login::logout');
 });
 
 $routes->group('', ['filter' => 'sudahLogin'], function ($routes) {
-	$routes->get('/Register', 'auth/Register::index');
-	$routes->post('/Register', 'auth/Register::register');
+	$routes->get('/RegisterPembeli', 'auth/Register::index_pembeli');
+	$routes->post('/RegisterPembeli', 'auth/Register::register_pembeli');
+	$routes->get('/RegisterPenjual', 'auth/Register::index_penjual');
+	$routes->post('/RegisterPenjual', 'auth/Register::register_penjual');
 	$routes->get('/Login', 'auth/Login::index');
 	$routes->post('/Login', 'auth/Login::Login');
 });

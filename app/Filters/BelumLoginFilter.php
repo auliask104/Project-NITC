@@ -6,12 +6,12 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Filters\FilterInterface;
 
-class LoginFilter implements FilterInterface
+class BelumLoginFilter implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        if (!session('Username')) // saya hanya membuat sederhana saja. silahkan kembangkan di kemudian hari
-        {
+        if (!session('username')) {
+            session()->setFlashdata('error', 'Login Terlebih dahulu');
             return redirect()->to('/Login');
         }
     }

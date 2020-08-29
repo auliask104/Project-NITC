@@ -42,15 +42,19 @@ class Pesanan extends Migration
 				'type'			=> 'VARCHAR',
 				'constraint'	=> '255',
 			],
+			'gambar_watermark'  => [
+				'type'			=> 'VARCHAR',
+				'constraint'	=> '255',
+			],
 		]);
 		$this->forge->addPrimaryKey('id');
-		$this->forge->createTable('Pesanan');
+		$this->forge->createTable('pesanan');
 	}
 
 	//--------------------------------------------------------------------
 
 	public function down()
 	{
-		$this->forge->dropTable('Pesanan');
+		$this->forge->dropTable('pesanan');
 	}
 }

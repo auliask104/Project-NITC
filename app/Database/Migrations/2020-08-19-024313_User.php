@@ -43,24 +43,25 @@ class User extends Migration
 				'default'		 => null,
 			],
 			'role'				 => [
-				'type'			 => 'Enum("Penjual" , "Pembeli")'
+				'type'			 => 'ENUM',
+				'constraint'	 => ['penjual', 'pembeli'],
+				'default'		 => null,
 			],
 			'no_rekenening'		 => [
-				'type' 			 => 'INT',
+				'type' 			 => 'VARCHAR',
 				'constraint' 	 => '20',
-				'default'		 => null,
-			]
+			],
 		]);
 		$this->forge->addPrimaryKey('id');
-		$this->forge->addPrimaryKey('Username');
-		$this->forge->addUniqueKey(['Email']);
-		$this->forge->createTable('User');
+		$this->forge->addPrimaryKey('username');
+		$this->forge->addUniqueKey(['email']);
+		$this->forge->createTable('user');
 	}
 
 	//--------------------------------------------------------------------
 
 	public function down()
 	{
-		$this->forge->dropTable('User');
+		$this->forge->dropTable('user');
 	}
 }
