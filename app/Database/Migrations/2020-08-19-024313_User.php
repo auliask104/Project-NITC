@@ -47,7 +47,7 @@ class User extends Migration
 				'constraint'	 => ['penjual', 'pembeli'],
 				'default'		 => null,
 			],
-			'no_rekenening'		 => [
+			'no_rekening'		 => [
 				'type' 			 => 'VARCHAR',
 				'constraint' 	 => '20',
 			],

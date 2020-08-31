@@ -38,6 +38,8 @@ $routes->get('/', 'Home::index');
 
 $routes->group('', ['filter' => 'belumLogin'], function ($routes) {
 	$routes->get('/Logout', 'auth/Login::logout');
+	$routes->get('/Profile', 'User::profile');
+	$routes->post('/Profile', 'User::edit_profile');
 });
 
 $routes->group('', ['filter' => 'sudahLogin'], function ($routes) {
