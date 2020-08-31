@@ -15,4 +15,11 @@ class UserModel extends Model
             ->where(array('username' => $username, 'password' => $password))
             ->get()->getRowArray();
     }
+    public function get_user($id = false)
+    {
+        if ($id == false) {
+            return $this->findAll();
+        }
+        return $this->where(['id' => $id])->first();
+    }
 }
