@@ -1,3 +1,168 @@
 .btn:hover {
   color: #fff;
 }
+
+.menu-tidak-aktif {
+  font-weight: 400 !important;
+}
+
+.menu-aktif {
+  font-weight: 500 !important;
+  color: #ff5c97 !important;
+  padding-left: 5px;
+}
+
+.custom-file-label::after {
+  content: "Cari";
+}
+
+.thumbnail {
+  width: 200px; /* width of container */
+  height: 200px; /* height of container */
+  object-fit: cover;
+}
+
+.star-rating-s15 {
+  background-image: url(https://assetsv2.fiverrcdn.com/assets/v2_globals/icn-master-ratings-stars-dd1e58ea1d685f280e62395e479994a3.svg),
+    url(https://assetsv2.fiverrcdn.com/assets/v2_globals/icn-master-ratings-stars-dd1e58ea1d685f280e62395e479994a3.svg),
+    url(https://assetsv2.fiverrcdn.com/assets/v2_globals/icn-master-ratings-stars-dd1e58ea1d685f280e62395e479994a3.svg),
+    url(https://assetsv2.fiverrcdn.com/assets/v2_globals/icn-master-ratings-stars-dd1e58ea1d685f280e62395e479994a3.svg),
+    url(https://assetsv2.fiverrcdn.com/assets/v2_globals/icn-master-ratings-stars-dd1e58ea1d685f280e62395e479994a3.svg);
+  background-repeat: no-repeat;
+  background-size: 15px 45px;
+  display: inline-block;
+  overflow: hidden;
+  width: 91px;
+  height: 15px;
+  text-indent: -3000px;
+}
+
+.star-rating-s15.show-one {
+  width: 15px;
+}
+
+.star-rating-s15.rate-0 {
+  background-position: center left, center left 19px, center left 38px,
+    center left 57px, center left 76px;
+}
+
+.star-rating-s15.rate-1 {
+  background-position: bottom left, center left 19px, center left 38px,
+    center left 57px, center left 76px;
+}
+
+.star-rating-s15.rate-2 {
+  background-position: top left, center left 19px, center left 38px,
+    center left 57px, center left 76px;
+}
+
+.star-rating-s15.rate-3 {
+  background-position: top left, bottom left 19px, center left 38px,
+    center left 57px, center left 76px;
+}
+
+.star-rating-s15.rate-4 {
+  background-position: top left, top left 19px, center left 38px,
+    center left 57px, center left 76px;
+}
+
+.star-rating-s15.rate-5 {
+  background-position: top left, top left 19px, bottom left 38px,
+    center left 57px, center left 76px;
+}
+
+.star-rating-s15.rate-6 {
+  background-position: top left, top left 19px, top left 38px, center left 57px,
+    center left 76px;
+}
+
+.star-rating-s15.rate-7 {
+  background-position: top left, top left 19px, top left 38px, bottom left 57px,
+    center left 76px;
+}
+
+.star-rating-s15.rate-8 {
+  background-position: top left, top left 19px, top left 38px, top left 57px,
+    center left 76px;
+}
+
+.star-rating-s15.rate-9 {
+  background-position: top left, top left 19px, top left 38px, top left 57px,
+    bottom left 76px;
+}
+
+.star-rating-s15.rate-10 {
+  background-position: top left, top left 19px, top left 38px, top left 57px,
+    top left 76px;
+}
+
+.rating-number {
+  color: #ffbf00;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+@media (min-width: 992px) {
+  .col-lg-25 {
+    flex: 0 0 20%;
+    max-width: 20%;
+    padding-left: 0px;
+  }
+}
+
+.thumbnail-product {
+  height: 150px;
+}
+
+@media (min-width: 330px) and (max-width: 480px) {
+  .thumbnail-product {
+    height: 200px;
+  }
+}
+
+.product-cover {
+  object-fit: cover;
+}
+
+.card-teks {
+  color: #040f0f;
+  line-height: 22px;
+  font-weight: 400;
+  height: 43px;
+  box-sizing: border-box;
+  overflow: hidden;
+  word-wrap: break-word;
+  word-break: break-word;
+  transition: 0.15s ease-in-out;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.card:hover .card-teks {
+  color: #248232;
+}
+
+.card-footer {
+  background-color: #fff;
+}
+
+.card-price {
+  color: #040f0f;
+  font-weight: 400;
+}
+
+.card-price:hover {
+  color: #040f0f;
+}
+
+.produk .card-body,
+.produk .card-footer {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.card:hover.box-shadow {
+  box-shadow: 0 0.125rem 0.25rem rgba(36, 130, 50, 0.075) !important;
+}
